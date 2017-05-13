@@ -1,0 +1,70 @@
+<div class="container-fluid carousel-height">
+    <div class="row justify-content-md-center" >
+        <div class="col-md-2 hidden-sm-down">
+            <ul class = "brand">
+                <li *ngFor = "let p of brandArray1"><img src={{p}} width = 160 ></li>
+            </ul>
+        </div>
+
+        <div class="col-md-8 col-sm-12 text-center">
+            <carousel>
+              <slide>
+                <img class = "img-main-size " src="https://s3.eu-west-2.amazonaws.com/first-supplier-pict/instrument.jpg" alt="Строительный инструмент">
+                <div class="carousel-caption">
+                  <h3 class= "carousel-text ">Строительный инструмент: </h3>
+                  <p class= "carousel-text">слесарный, столярный, измерительный, крепежный, режущий </p>
+                </div>
+              </slide>
+              <slide>
+                <img class = "img-main-size " src="https://s3.eu-west-2.amazonaws.com/first-supplier-pict/building.jpg" alt="Строительные материалы">
+                <div class="carousel-caption ">
+                  <h3 class= "carousel-text black">Строительные материалы: </h3>
+                  <p class= "carousel-text black">Смеси, блоки, цемент, кирпич, краски, сетки, ленты, пены, герметики и т.д.</p>
+                </div>
+              </slide>
+              <slide>
+                <img class = "img-main-size" src="https://s3.eu-west-2.amazonaws.com/first-supplier-pict/tap.jpg" alt="Сантехника">
+                <div class="carousel-caption ">
+                  <h3 class= "carousel-text black">Сантехника:</h3>
+                  <p class= "carousel-text black">Биде, ванны, душевые поддоны, кабины, боксы , душевые системы, кухонные мойки и т.д.</p>
+                </div>
+              </slide>
+
+              <slide>
+                <img class = "img-main-size align-middle" src="https://s3.eu-west-2.amazonaws.com/first-supplier-pict/electro.jpg" alt="Электрика">
+                <div class="carousel-caption">
+                  <h3 class= "carousel-text black">Электрика: </h3>
+                  <p class= "carousel-text">модульная автоматика, силовое оборудование,
+            розетки, выключатели и удлинители, светотехника и т.д.
+            </p>
+                </div>
+              </slide>
+
+              <slide>
+                <img class = "img-main-size align-middle" src="https://s3.eu-west-2.amazonaws.com/first-supplier-pict/hoz.jpg" alt="Хозтовары">
+                <div class="carousel-caption">
+                  <h3 class= "carousel-text">Хозяйственные товары</h3>
+                  <p class= "carousel-text">Бумажно-гигиеническая продукция, бытовая химия, замочно-скобяные изделия,
+                    мешки хозяйственные и пакеты для мусора,
+                    салфетки и т.д.</p>
+                </div>
+              </slide>
+
+              <slide>
+                <img class = "img-main-size align-middle" src="https://s3.eu-west-2.amazonaws.com/first-supplier-pict/pen.jpg" alt="Канцтовары">
+                <div class="carousel-caption">
+                  <h3 class= "carousel-text">Канцтовары: </h3>
+                  <p class= "carousel-text">Ручки, карандаши, степлеры, ножницы, бумага и т.д. </p>
+                </div>
+              </slide>
+            </carousel>
+        </div>
+
+        <div class="col-md-2 hidden-sm-down">
+            <ul class = "brand">
+                <li *ngFor = "let i of brandArray2"><img src={{i}} width = 160 ></li>
+            </ul>
+        </div>
+
+    </div>
+</div>

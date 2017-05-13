@@ -1,0 +1,11 @@
+<div class="container " >
+    <div class="card-deck">
+        <div class="card hand" *ngFor ="let i of instrumentSelectors">
+        <a routerLink="/companies"><img class="card-img-top img-fluid" src={{i.picture}} ></a>
+        <div class="card-block" >
+          <h4 class="card-title"><a routerLink="/companies">{{i.display}}</a></h4>
+          <p class="card-text"><small class="text-muted"><a routerLink="/companies">{{i.text}}</a></small></p>
+        </div>
+      </div>
+      </div>
+</div>

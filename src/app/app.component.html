@@ -1,3 +1,90 @@
-<h1>
-  {{title}}
-</h1>
+
+<div class="jumbotron jumbotron-fluid py-1">
+  <div class="container">
+    <h1 class="display-4 nameJumbo">Только первые поставщики</h1>
+    <p class="lead text-center">...и никаких посредников</p>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" routerLink="">Первый поставщик</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngFor = "let v of linkArray">
+          <a class="nav-link toButton" [routerLink]="v.link" >{{v.value}} <span class="sr-only">(current)</span></a>
+    </ul>
+  </div>
+</nav>
+<hr>
+
+
+      <div class="card">
+          <h4 class="card-header">Точечный поиск:</h4>
+          <div class="card-block">
+              <form #formSelect="ngForm" novalidate>
+                  <div class="form-class">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-12">
+                                <label class= "naming">Выберите категорию:</label>
+                                <select class="form-control " name="category" [(ngModel)] = "activeSearch.category" (mouseleave) = "getCL()">
+                                    <option *ngFor = "let i of categorySelectors" [value] = "i.value" >{{i.display}}</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <label class= "naming">Выберите подкатегорию:</label>
+                                <select class="form-control " name="subCategory" [(ngModel)] = "activeSearch.subCategory">
+                                    <option *ngFor = "let subCategory of subCategorySelectors" [value] = "subCategory.value">{{subCategory.display}}</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-12">
+                                <label class= "naming">Выбрать торговую марку:</label>
+                                <select class="form-control " name="tradeMark" [(ngModel)] = "activeSearch.TM">
+                                    <option *ngFor = "let tm of arrayTM" [value]="tm.value">{{tm.display}}</option>
+                                </select>
+                            </div>
+                                  <div class="col-lg-2 col-md-12">
+                                  <label class= "naming white ">:</label>
+                                  <button type="submit" class="btn btn-secondary btn-block font" (click)= "searchResult(formSelect.value)">Найти</button>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+<br>
+
+
+<router-outlet></router-outlet>
+
+<hr>
+<footer>
+    <div class="foot-wrap container-flex text-center">
+        <div class="row">
+            <div class="para1 col-md-5  col-sm-4">
+                <p>Вся интеллектуальная информация портала принадлежит компании "Фабрика Курсовых". Все права защищены. Несанкционированное использование материалов портала запрещено.</p>
+            </div>
+            <div class="para2 col-md-4 col-sm-4">
+                <p>Индивидуальный предприниматель Исаевский Дмитрий Викторович. Свидетельство о государственной регистрации №190593899 </p>
+            </div>
+
+            <div class="down col-md-3 col-sm-4">
+                <p>Телефоны:</p>
+                <ul class="brand ">
+                    <li>+375-29-751-55-51;</li>
+                    <li>+375-29-347-12-22;</li>
+                    <li>+375-17-362-99-00;</li>
+                </ul>
+                <p>Email: 7515551@mail.ru</p>
+                <p>Skype: dv-dmitry</p>
+            </div>
+        </div>
+    </div>
+
+</footer>

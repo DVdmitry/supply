@@ -1,1 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
+
+.img-main-size {
+    height: 500px;
+    width: 860px;
+}
+
+.carousel-text {
+    color: white;
+}
+
+.carousel-caption p{
+    font-variant: small-caps;
+}
+
+.black {
+    color: black;
+}
+
+label  {
+    font-size: 18px;
+    font-variant: small-caps;
+}
+
+.white {
+    text-indent: -10000px;
+}
+.font {
+    font-variant: small-caps;
+    height: 50%;
+}
+
+.toButton {
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+    margin: 1px;
+}
+
+.toButton:hover {
+    box-shadow: 1px 1px 1px 1px;
+}
+
+
+.brand {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.brand li {
+    margin: 10px;
+}
+
+.down p, .down li{
+    margin: 1px;
+    padding: 1px;
+}
+
+.card{
+    margin-bottom: 10px;
+}
+
+.jumbotron{
+    margin: 0px;
+}
+
+.importbrand {
+    max-width: 120px;
+    max-height: 70px;
+    margin: 7px;
+}
+
+.logo {
+    max-width: 180px;
+    max-height: 120px;
+}
+
+.flex{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.type-none{
+    list-style-type: none;
+    margin: 2px;
+    padding: 2px;
+}
+
+.toButton-noHover{
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+    margin: 2px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.hand {
+    cursor: pointer;
+}

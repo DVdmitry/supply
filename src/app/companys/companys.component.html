@@ -1,0 +1,16 @@
+<div class="card-deck">
+  <div class="card" *ngFor = "let company of companies">
+    <img class="card-img-top logo" src={{company.logo}} alt={{company.name}}>
+    <div class="card-block">
+        <h4 class="card-title">{{company.name}}</h4>
+        <p class="card-text">{{company.data}}</p>
+        <p class="bold">Другие импортируемые товары:</p>
+        <ul class="flex">
+            <li class="flex type-none toButton-noHover" *ngFor = "let stuffs of company.stuff"><small>{{stuffs}}</small></li>
+        </ul>
+        <br>
+     <p class="bold">Импортируемые бренды:</p>
+     <img class="importbrand" *ngFor = "let brand of company.brand" src={{brand}}>
+    </div>
+  </div>
+</div>
